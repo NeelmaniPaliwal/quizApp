@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s;
+}
+
+.main-div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.intro-div {
+  width: 100%;
+  height: 100%;
+  background: #ffc72c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: shrink 0.9s linear forwards;
+  animation-delay: 4s;
+}
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.logo {
+  width: 0;
+  animation: scaling 0.9s linear forwards;
+}
+
+@keyframes scaling {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+.loader {
+  margin-top: 2.5%;
+  width: 0;
+  border: 2px solid #ffc72c;
+  animation: increasing 0.9s linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes increasing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15%;
+    border: 2px solid #fff;
+  }
+}
+
+.quiz-area {
+  width: 0;
+  height: 100%;
+  background: #febe10;
+  animation: upshrink 0.9s linear forwards;
+  animation-delay: 4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+@keyframes upshrink {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.display {
+  clip-path: polygon(0 6%, 100% 0%, 100% 90%, 0% 100%);
+  /* background: linear-gradient(#009ffd, #2a2a72); */
+  background: #22a6b3;
+  width: 45%;
+  height: 50%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-inner {
+  width: 90%;
+  height: 70%;
+  background: #fff;
+  border-radius: 10px;
+  resize: none;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  font-size: 28px;
+  padding: 2%;
+}
+
+.options {
+  width: 70%;
+  padding: 1% 0;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+  padding: 1% 0;
+}
+
+.option {
+  cursor: pointer;
+  min-width: 30%;
+  border-radius: 5px;
+  padding: 1% 2%;
+  font-weight: 500;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+}
+
+.option:hover {
+  background: #badc58;
+}
+
+.btn {
+  background: #16a085;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 1% 8%;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none;
+  outline: none;
+}
+
+.btn:hover {
+  background: #1abc9c;
+}
+
+@media screen and (max-width:700px){
+.display{
+  width : 80%;
+}
